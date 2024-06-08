@@ -19,7 +19,8 @@ La división de investigación y desarrollo del CIV y el CIVART han determinado 
 | Bajo | Neutralidad, Felicidad | 
 
 ## Solución
-Recursos de software: YOLOV8, Open CV, Pygame.
+* Recursos de software: YOLOV8, Open CV, Pygame.
+
 Se presenta una solución utilizando visión computacional para detectar el estado parcial psicológico de diferentes individuos así como su clasificación por roles de acuerdo con el color de su uniforme. Se considera un contexto en donde se presenta una situación de desastre, en donde los sujetos están sometidos a situaciones de alto estrés. De acuerdo con la clasificación realizada, se genera una simulación que sigue un protocolo de calma y estabilización, presentando una transición de colores determinada.
 
 ## Etapas
