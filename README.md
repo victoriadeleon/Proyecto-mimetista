@@ -2,7 +2,7 @@
 Colaboración de investigación y desarrollo entre el ITESM y CIV.  
 
 ## Contexto
-La división de investigación y desarrollo del CIV y el CIVART han determinado que lossujetos sometidos a situaciones extraordinarias de alto estrés tanto físico como psicológico,conllevan a un aletargamiento y consecuentemente a una parálisis en sus actividades de respuesta en los momentos de respuesta a un evento catastrófico. Al observar la evolución de las tecnológicas en auge, el CIV considera oportuno el desarrollo de una herramienta con la función de disminuir el riesgo psicológico y el trauma en las personas involucradas, (población directamente afectada, cuerpos de respuesta y voluntarios) en las diferentes etapas de un desastre natural y/o antropogénico. Dicha herramienta buscará incrementar la eficiencia de los involucrados en una zona de desastre con el objetivo de agilizar la respuesta a la catástrofe. Asimismo, buscará contribuir en la disminución de futuros riesgos y vulnerabilidades en las etapas consiguientes de la recuperación frente a un desastre.
+La división de investigación y desarrollo del CIV y el CIVART han determinado que lossujetos sometidos a situaciones extraordinarias de alto estrés tanto físico como psicológico, conllevan a un aletargamiento y consecuentemente a una parálisis en sus actividades de respuesta en los momentos de respuesta a un evento catastrófico. Al observar la evolución de las tecnológicas en auge, el CIV considera oportuno el desarrollo de una herramienta con la función de disminuir el riesgo psicológico y el trauma en las personas involucradas, (población directamente afectada, cuerpos de respuesta y voluntarios) en las diferentes etapas de un desastre natural y/o antropogénico. Dicha herramienta buscará incrementar la eficiencia de los involucrados en una zona de desastre con el objetivo de agilizar la respuesta a la catástrofe. Asimismo, buscará contribuir en la disminución de futuros riesgos y vulnerabilidades en las etapas consiguientes de la recuperación frente a un desastre.
 
 ## Objetivo
 * Identificar el estado parcial psicológico de las personas afectadas y en shock por medio de procedimientos no invasivos, utilizando reconocimiento de imagen para detectar emociones básicas
@@ -25,8 +25,8 @@ Se presenta una solución utilizando visión computacional para detectar el esta
 ## Etapas
 A. Se realizó un sistema de detección de emociones básicas (enojo, miedo, tristeza, sorpresa, disgusto, neutralidad, felicidad) utilizando YOLO V8.
 * Se entrenó el modelo con imagenes de las siguientes bases de datos: 
-- https://www.kaggle.com/datasets/kmirfan/micro-expressions/data
-- https://www.kaggle.com/datasets/ananthu017/emotion-detection-fer
+https://www.kaggle.com/datasets/kmirfan/micro-expressions/data
+https://www.kaggle.com/datasets/ananthu017/emotion-detection-fer
 * Se realizó una selección manual y se aplicó un algoritmo de preprocesamiento para escalar las imagenes a 80x80 y pasarlas a escala de grises para facilitar la detección de rasgos faciales.
 * La distribución del dataset fue de 800 imagenes para entrenamiento y 180 de validación para cada una de las emociones (5600 imagenes totales de entremiento y 1260 de validación)
 
@@ -40,7 +40,6 @@ C. Sistema de categorías Triage
 * A partir de ello, se desarrolló una máquina de estados para obtener como salida el protocolo necesario a seguir.
 * Se utilizó Pygame para generar un simulador de luz LED en donde la transición de colores sucede como se especifica en la tabla del sistema de categorías.
 
-Desarrollo de software: YOLOV8, PyGame, 
 ### Sistema de categorías Triage
 ![image](https://github.com/victoriadeleon/Proyecto-mimetista/assets/70030691/362f0184-e33e-4962-9674-821d280b4388)
 ### Identificación de sujetos involucrados por color de vestimenta:
