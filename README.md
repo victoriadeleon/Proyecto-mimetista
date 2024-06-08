@@ -10,12 +10,20 @@ La división de investigación y desarrollo del CIV y el CIVART han determinado 
   1. Población Civil Afectada (PCA): Azul, morado
   2. Voluntarios Civiles y Personal de Respuesta Civil (PRC): Amarillo, rojo, naranja
   3. Personal de respuesta DNIII y entidades semejantes (PRM): Verde
-* Traducir ambas lecturas a un sistema de categorías Triage (nivel de estrés/shock:  alto, medio, bajo).
+* Traducir ambas lecturas a un sistema de categorías Triage (nivel de estrés/shock: alto, medio, bajo).
+| Nivel de estrés | Emoción asociada |
+|--------------|--------------|
+| Alto       | Enojo, miedo       | 
+| Medio       | Tristeza, sorpresa, disgusto       | 
+| Bajo       | Neutralidad, Felicidad       | 
 
 Se presenta una solución utilizando visión computacional para detectar el estado parcial psicológico de diferentes individuos así como su clasificación por roles de acuerdo con el color de su uniforme. Se considera un contexto en donde se presenta una situación de desastre, en donde los sujetos están sometidos a situaciones de alto estrés. De acuerdo con la clasificación realizada, se genera una simulación que sigue un protocolo de calma y estabilización, presentando una transición de colores determinada.
 
+## Solución
+* Se realizó un sistema de detección de emociones básicas
+
 Desarrollo de software: YOLOV8, PyGame, 
-
+### Sistema de categorías Triage
 ![image](https://github.com/victoriadeleon/Proyecto-mimetista/assets/70030691/362f0184-e33e-4962-9674-821d280b4388)
-
+### Identificación de sujetos involucrados por color de vestimenta:
 ![image](https://github.com/victoriadeleon/Proyecto-mimetista/assets/70030691/0f4f3011-de41-4f7f-ac38-ea06f13b5164)
