@@ -18,10 +18,27 @@ La división de investigación y desarrollo del CIV y el CIVART han determinado 
 | Medio | Tristeza, sorpresa, disgusto |
 | Bajo | Neutralidad, Felicidad | 
 
+## Solución
+Recursos de software: YOLOV8, Open CV, Pygame.
 Se presenta una solución utilizando visión computacional para detectar el estado parcial psicológico de diferentes individuos así como su clasificación por roles de acuerdo con el color de su uniforme. Se considera un contexto en donde se presenta una situación de desastre, en donde los sujetos están sometidos a situaciones de alto estrés. De acuerdo con la clasificación realizada, se genera una simulación que sigue un protocolo de calma y estabilización, presentando una transición de colores determinada.
 
-## Solución
-* Se realizó un sistema de detección de emociones básicas
+## Etapas
+A. Se realizó un sistema de detección de emociones básicas (enojo, miedo, tristeza, sorpresa, disgusto, neutralidad, felicidad) utilizando YOLO V8.
+* Se entrenó el modelo con imagenes de las siguientes bases de datos: 
+- https://www.kaggle.com/datasets/kmirfan/micro-expressions/data
+- https://www.kaggle.com/datasets/ananthu017/emotion-detection-fer
+* Se realizó una selección manual y se aplicó un algoritmo de preprocesamiento para escalar las imagenes a 80x80 y pasarlas a escala de grises para facilitar la detección de rasgos faciales.
+* La distribución del dataset fue de 800 imagenes para entrenamiento y 180 de validación para cada una de las emociones (5600 imagenes totales de entremiento y 1260 de validación)
+
+B. Se utilizaron técnicas de procesamiento de imagen por rangos HSV con máscaras para detectar el color del uniforme de los sujetos identificados.
+* Se ajustaron los rangos HSV para asegurar una correcta detección para cada uno de los casos.
+* Se utilizó Open CV para capturar el video en tiempo real y aplicar las máscaras de detección a cada frame.
+* Se realizó una lógica simple para que se imprimiera en pantalla el color detectado.
+
+C. Sistema de categorías Triage
+* Utilizando como referencia la tabla mostrada anteriormente, se programaron las condiciones necesarias para detectar los diferentes estados de estrés/shock.
+* A partir de ello, se desarrolló una máquina de estados para obtener como salida el protocolo necesario a seguir.
+* Se utilizó Pygame para generar un simulador de luz LED en donde la transición de colores sucede como se especifica en la tabla del sistema de categorías.
 
 Desarrollo de software: YOLOV8, PyGame, 
 ### Sistema de categorías Triage
