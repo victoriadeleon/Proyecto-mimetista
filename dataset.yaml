@@ -1,0 +1,7 @@
+
+path: C:/Users/victo/OneDrive - Instituto Tecnologico y de Estudios Superiores de Monterrey/Computer backup/6 sem/Computer-vision/YOLO_blackandwhite  # Ruta a tu conjunto de datos
+train: images/train 
+val: images/val  
+
+nc: 7  
+names: ['anger', 'disgust', 'fear', 'happiness', 'neutral', 'sadness', 'surprise']  
