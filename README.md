@@ -11,8 +11,8 @@ La división de investigación y desarrollo del CIV y el CIVART han determinado 
   2. Voluntarios Civiles y Personal de Respuesta Civil (PRC): Amarillo, rojo, naranja
   3. Personal de respuesta DNIII y entidades semejantes (PRM): Verde
 * Traducir ambas lecturas a un sistema de categorías Triage (nivel de estrés/shock: alto, medio, bajo).
+  
 | Nivel de estrés | Emoción asociada |
-|-----------------|------------------|
 | Alto            | Enojo, miedo     |
 | Medio           | Tristeza, sorpresa, disgusto |
 | Bajo            | Neutralidad, Felicidad | 
