@@ -44,13 +44,11 @@ Se presenta una solución utilizando visión computacional para detectar el esta
 * **Máquina de Estados:** Desarrollo de una máquina de estados para determinar el protocolo necesario a seguir.
 * **Simulador de Luz LED:** Uso de Pygame para generar un simulador de luz LED donde la transición de colores ocurre como se especifica en la tabla del sistema de categorías.
 
-## Resultados
-
 ### Sistema de Categorías Triage
 ![Sistema de Categorías Triage](https://github.com/victoriadeleon/Proyecto-mimetista/assets/70030691/362f0184-e33e-4962-9674-821d280b4388)
 
 ### Identificación de Sujetos Involucrados por Color de Vestimenta
 ![Identificación de Sujetos](https://github.com/victoriadeleon/Proyecto-mimetista/assets/70030691/0f4f3011-de41-4f7f-ac38-ea06f13b5164)
 
-## Conclusión
+## Valor del proyecto
 El Proyecto Mimetista busca proporcionar una herramienta innovadora para mejorar la respuesta en situaciones de desastre, reduciendo el impacto psicológico y aumentando la eficiencia de los equipos involucrados. A través del uso de tecnologías avanzadas de visión computacional y procesamiento de imagen, este proyecto promete ser un recurso valioso en la gestión de emergencias.
