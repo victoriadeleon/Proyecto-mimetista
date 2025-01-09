@@ -53,7 +53,8 @@ Se presenta una solución utilizando visión computacional para detectar el esta
 ## Valor del proyecto
 El Proyecto Mimetista busca proporcionar una herramienta innovadora para mejorar la respuesta en situaciones de desastre, reduciendo el impacto psicológico y aumentando la eficiencia de los equipos involucrados. A través del uso de tecnologías avanzadas de visión computacional y procesamiento de imagen, este proyecto promete ser un recurso valioso en la gestión de emergencias.
 
-
-![image](https://github.com/user-attachments/assets/66e140f1-715e-4650-8429-1a89c3c878a4)
-![image](https://github.com/user-attachments/assets/a3d3ffc9-9a06-4d71-9283-a32649f57a90)
+<div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+  <img src="https://github.com/user-attachments/assets/66e140f1-715e-4650-8429-1a89c3c878a4" alt="Image 1" width="300"/>
+  <img src="https://github.com/user-attachments/assets/a3d3ffc9-9a06-4d71-9283-a32649f57a90" alt="Image 2" width="300"/>
+</div>
 
