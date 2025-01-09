@@ -1,57 +1,57 @@
-# Proyecto Mimetista
-Colaboración de investigación y desarrollo entre el ITESM y el CIV.
+# Computer Vision Project
+Emotion recognition and uniform color detection for enhanced decision-making in high-risk scenarios.
 
-## Contexto
-La división de investigación y desarrollo del CIV y el CIVART han determinado que los sujetos sometidos a situaciones extraordinarias de alto estrés, tanto físico como psicológico, experimentan aletargamiento y, consecuentemente, una parálisis en sus actividades de respuesta durante eventos catastróficos. Observando la evolución de las tecnologías emergentes, el CIV considera oportuno desarrollar una herramienta que disminuya el riesgo psicológico y el trauma en las personas involucradas (población directamente afectada, cuerpos de respuesta y voluntarios) en las diferentes etapas de un desastre natural y/o antropogénico. Esta herramienta busca incrementar la eficiencia de los involucrados en una zona de desastre, con el objetivo de agilizar la respuesta a la catástrofe y contribuir a disminuir futuros riesgos y vulnerabilidades en las etapas de recuperación posteriores a un desastre.
+## Context
+The research and development division of CIV and CIVART in Mexico City have determined that individuals subjected to extraordinary high-stress situations, both physical and psychological, experience lethargy and, consequently, paralysis in their response activities during catastrophic events. Observing the evolution of emerging technologies, CIV considers it timely to develop a tool that reduces psychological risk and trauma for the people involved (directly affected population, response teams, and volunteers) in the various stages of a natural and/or anthropogenic disaster. This tool seeks to increase the efficiency of those involved in a disaster zone, with the goal of accelerating the response to the catastrophe and contributing to reducing future risks and vulnerabilities during the post-disaster recovery stages.
 
-## Objetivo
-* Identificar el estado psicológico parcial de las personas afectadas y en shock mediante procedimientos no invasivos, utilizando reconocimiento de imagen para detectar emociones básicas.
-* Distinguir entre los distintos actores generales involucrados en el desastre, de acuerdo con el color de su uniforme:
-  1. **Población Civil Afectada (PCA):** Azul, morado.
-  2. **Voluntarios Civiles y Personal de Respuesta Civil (PRC):** Amarillo, rojo, naranja.
-  3. **Personal de Respuesta DNIII y Entidades Semejantes (PRM):** Verde.
-* Traducir ambas lecturas a un sistema de categorías Triage (nivel de estrés/shock: alto, medio, bajo).
+## Goal
+* Identify the partial psychological state of affected individuals in shock through non-invasive procedures, using image recognition to detect basic emotions.
+* Distinguish between the different general actors involved in the disaster based on the color of their uniform:
+  1. Affected Civilian Population (ACP): Blue, purple.
+  2. Civil Volunteers and Civil Response Personnel (CRP): Yellow, red, orange.
+  3. DNIII Response Personnel and Similar Entities (RPE): Green.
+* Translate both readings into a Triage category system (stress/shock levels: high, medium, low).
 
-| Nivel de Estrés | Emoción Asociada                           |
+| Stress Level    | Associated Emotion                         |
 |-----------------|--------------------------------------------|
-| Alto            | Enojo, miedo                               |
-| Medio           | Tristeza, sorpresa, disgusto               |
-| Bajo            | Neutralidad, felicidad                     |
+| High            | Anger, fear                                |
+| Medium          | Sadness, surprise, disgust                 |
+| Low             | Neutrality, happiness                      |
 
-## Solución
-**Recursos de Software:** YOLOv8, OpenCV, Pygame.
+## Solution
+**Software Resources:** YOLOv8, OpenCV, Pygame.
 
-Se presenta una solución utilizando visión computacional para detectar el estado psicológico parcial de diferentes individuos y su clasificación por roles, de acuerdo con el color de su uniforme. En un contexto de desastre, donde los sujetos están sometidos a situaciones de alto estrés, se genera una simulación que sigue un protocolo de calma y estabilización, presentando una transición de colores determinada.
+A solution is presented using computer vision to detect the partial psychological state of different individuals and classify them by roles based on the color of their uniform. In a disaster context, where individuals are subjected to high-stress situations, a simulation is generated following a protocol for calm and stabilization, presenting a determined color transition.
 
-## Etapas
+## Stages
 
-### A. Detección de Emociones Básicas
-* Se desarrolló un sistema de detección de emociones básicas (enojo, miedo, tristeza, sorpresa, disgusto, neutralidad, felicidad) utilizando YOLOv8.
-* **Entrenamiento del Modelo:** Se entrenó el modelo con imágenes de las siguientes bases de datos:
+### A. Elemental Emotion Detection
+* A basic emotion detection system was developed (anger, fear, sadness, surprise, disgust, neutrality, happiness) using YOLOv8.
+* **Model Training:** The model was trained with images from the following datasets:
   - [Micro-expressions](https://www.kaggle.com/datasets/kmirfan/micro-expressions/data)
   - [Emotion Detection FER](https://www.kaggle.com/datasets/ananthu017/emotion-detection-fer)
-* **Preprocesamiento de Imágenes:** Selección manual y aplicación de un algoritmo de preprocesamiento para escalar las imágenes a 80x80 y convertirlas a escala de grises para facilitar la detección de rasgos faciales.
-* **Distribución del Dataset:** 800 imágenes para entrenamiento y 180 para validación para cada emoción (5600 imágenes totales de entrenamiento y 1260 de validación).
+* **Image Preprocessing** Manual selection and application of a preprocessing algorithm to scale the images to 80x80 and convert them to grayscale to facilitate facial feature detection.
+* **Dataset Distribution** 800 images for training and 180 for validation per emotion (5600 total training images and 1260 validation images).
+  
+### B. Uniform Color Detection
+* **Image Processing:** Use of image processing techniques with HSV ranges and masks to detect the uniform color of identified subjects.
+* **HSV Range Adjustment:** Ensuring correct detection for each case.
+* **Video Capture:** Use of OpenCV to capture real-time video and apply detection masks to each frame.
+* **Real-Time Detection:** Implementation of simple logic to display the detected color on the screen.
 
-### B. Detección de Color de Uniforme
-* **Procesamiento de Imagen:** Uso de técnicas de procesamiento de imagen por rangos HSV con máscaras para detectar el color del uniforme de los sujetos identificados.
-* **Ajuste de Rangos HSV:** Asegurar una correcta detección para cada caso.
-* **Captura de Video:** Utilización de OpenCV para capturar video en tiempo real y aplicar las máscaras de detección a cada frame.
-* **Detección en Tiempo Real:** Implementación de lógica simple para imprimir en pantalla el color detectado.
+### C. Triage Category System
+* **Detection Conditions:** Programming the necessary conditions to detect different stress/shock states using the reference table.
+* **State Machine:** Development of a state machine to determine the necessary protocol to follow.
+* **LED Light Simulator:** Use of Pygame to generate an LED light simulator where the color transition occurs as specified in the category system table.
 
-### C. Sistema de Categorías Triage
-* **Condiciones de Detección:** Programación de las condiciones necesarias para detectar los diferentes estados de estrés/shock, usando la tabla de referencia.
-* **Máquina de Estados:** Desarrollo de una máquina de estados para determinar el protocolo necesario a seguir.
-* **Simulador de Luz LED:** Uso de Pygame para generar un simulador de luz LED donde la transición de colores ocurre como se especifica en la tabla del sistema de categorías.
-
-### Sistema de Categorías Triage
+### Triage Category System
 ![Sistema de Categorías Triage](https://github.com/victoriadeleon/Proyecto-mimetista/assets/70030691/362f0184-e33e-4962-9674-821d280b4388)
 
-### Identificación de Sujetos Involucrados por Color de Vestimenta
+### Identification of Involved Subjects by Uniform Color
 ![Identificación de Sujetos](https://github.com/victoriadeleon/Proyecto-mimetista/assets/70030691/0f4f3011-de41-4f7f-ac38-ea06f13b5164)
 
-## Valor del proyecto
-El Proyecto Mimetista busca proporcionar una herramienta innovadora para mejorar la respuesta en situaciones de desastre, reduciendo el impacto psicológico y aumentando la eficiencia de los equipos involucrados. A través del uso de tecnologías avanzadas de visión computacional y procesamiento de imagen, este proyecto promete ser un recurso valioso en la gestión de emergencias.
+## Project Value
+This project aims to provide an innovative tool to improve disaster response by reducing psychological impact and increasing the efficiency of the teams involved. Through the use of advanced computer vision and image processing technologies, this project promises to be a valuable resource in emergency management.
 
 <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
   <img src="https://github.com/user-attachments/assets/66e140f1-715e-4650-8429-1a89c3c878a4" alt="Image 1" width="300"/>
